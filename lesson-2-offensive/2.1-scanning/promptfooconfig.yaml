@@ -1,0 +1,41 @@
+# promptfooconfig.yaml
+# Promptfoo red-team configuration targeting local Ollama instance
+#
+# Usage:
+#   promptfoo redteam run
+#   promptfoo view
+
+description: "LLM Security Workshop - Red Team Evaluation"
+
+targets:
+  - id: ollama:llama3.2:1b
+    label: "llama3.2:1b (local)"
+
+redteam:
+  # Number of attack variants to generate per plugin
+  numTests: 10
+
+  plugins:
+    # Prompt injection attempts
+    - promptInjection
+
+    # Jailbreak (constraint removal)
+    - jailbreak
+
+    # Harmful content elicitation
+    - harmful:hate
+    - harmful:violence
+    - harmful:self-harm
+
+    # Data exfiltration simulation
+    - pii:direct
+    - pii:session
+
+    # System prompt leakage
+    - systemPromptLeakage
+
+  strategies:
+    # Try both direct and indirect injection styles
+    - basic
+    - crescendo      # Gradually escalating prompts
+    - jailbreak      # Persona-switching
