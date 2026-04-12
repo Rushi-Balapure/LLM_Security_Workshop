@@ -126,7 +126,7 @@ Summarize the provided text in 2-3 clear, concise sentences.
 Stick strictly to what is written. Do not add information.
 """
 
-def summarizer_generate(clean_document: str, focus: str = None) -> str:
+def summarizer_generate(clean_document: str, focus: str = "") -> str:
     """
     Step 3: Generate a summary from clean document text only.
     The user's original message (and any injection it contained) never reaches here.
@@ -159,7 +159,7 @@ def process(user_message: str) -> dict:
     clean_doc = retrieve_clean_document(intent)
 
     # Step 3: Summarize from clean data only (injection-free)
-    summary = summarizer_generate(clean_doc, intent.get("focus"))
+    summary = summarizer_generate(clean_doc, str(intent.get("focus")))
 
     return {
         "intent":    intent,
