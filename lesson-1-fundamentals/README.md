@@ -32,7 +32,7 @@ The core lesson: **You cannot trust the model to enforce your security policy.**
 
 ## 1.2 OWASP Top 10 for LLMs 2025
 
-The [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) is the industry standard reference for LLM-specific vulnerabilities.
+The [OWASP Top 10 for Large Language Model Applications](https://genai.owasp.org/llm-top-10/) is the industry standard reference for LLM-specific vulnerabilities.
 
 We will focus on the two most critical for this workshop, but you should be aware of all ten.
 
