@@ -166,7 +166,7 @@ BANNER = r"""
 ╚══════════════════════════════════════════════════════════╝
 """
 
-def run_scenario(label: str, email: str, attack_description: str = None):
+def run_scenario(label: str, email: str, attack_description: str = ""):
     print(f"\n{'=' * 58}")
     print(f"  SCENARIO: {label}")
     print(f"{'=' * 58}")
