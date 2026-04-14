@@ -31,7 +31,7 @@ except ImportError:
     print("Missing dependency. Run: pip install ollama")
     sys.exit(1)
 
-MODEL = "llama3.2:1b"
+MODEL = "tinyllama"
 
 # ── Pre-defined Action Registry ───────────────────────────────────────────────
 # This is the COMPLETE set of actions the agent can take.

@@ -17,7 +17,7 @@ except ImportError:
 
 # ── Config ───────────────────────────────────────────────────────────────────
 
-MODEL = "llama3.2:1b"
+MODEL = "tinyllama"
 
 SYSTEM_PROMPT = """You are a helpful customer service assistant for AcmeCorp.
 

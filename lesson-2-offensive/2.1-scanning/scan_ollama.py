@@ -6,7 +6,7 @@ and prints a human-readable summary.
 
 Usage:
     python scan_ollama.py
-    python scan_ollama.py --model llama3.2:1b --probes promptinject,dan
+    python scan_ollama.py --model tinyllama --probes promptinject,dan
 """
 
 import subprocess
@@ -18,7 +18,7 @@ from datetime import datetime
 
 # ── Config ──────────────────────────────────────────────────────────────────
 
-DEFAULT_MODEL  = "llama3.2:1b"
+DEFAULT_MODEL  = "tinyllama"
 DEFAULT_PROBES = "promptinject,dan"
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
@@ -42,7 +42,7 @@ def check_model_pulled(model: str):
         with urllib.request.urlopen("http://localhost:11434/api/tags") as resp:
             data = _json.loads(resp.read())
         pulled = [m["name"] for m in data.get("models", [])]
-        # Allow short names like "llama3.2:1b" to match "llama3.2:1b"
+        # Allow short names like "tinyllama" to match "tinyllama"
         if not any(model in p for p in pulled):
             print(f"❌ Model '{model}' not found in Ollama.")
             print(f"   Run: ollama pull {model}")
@@ -91,7 +91,7 @@ def print_tips():
     dan            - "Do Anything Now" jailbreak variants
                      (persona switching, constraint removal)
 
-  A 1B parameter model like llama3.2:1b will fail many of these.
+  A 1B parameter model like tinyllama will fail many of these.
   That's expected — and the point. In Lessons 2.2 and 2.3 we'll
   exploit these vulnerabilities manually. In Lesson 3 we defend.
 

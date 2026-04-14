@@ -31,7 +31,7 @@ except ImportError:
 BASE_DIR    = Path(__file__).parent
 DOCS_DIR    = BASE_DIR / "docs"
 OUTPUT_DIR  = BASE_DIR / "output"
-MODEL       = "llama3.2:1b"
+MODEL       = "tinyllama"
 
 DOCS_DIR.mkdir(exist_ok=True)
 OUTPUT_DIR.mkdir(exist_ok=True)

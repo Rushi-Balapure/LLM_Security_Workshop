@@ -21,7 +21,7 @@ except ImportError:
 
 # ── Config ───────────────────────────────────────────────────────────────────
 
-MODEL = "llama3.2:1b"
+MODEL = "tinyllama"
 
 SUMMARIZER_SYSTEM_PROMPT = """You are an AI email assistant. 
 Your ONLY job is to summarize the email provided by the user.

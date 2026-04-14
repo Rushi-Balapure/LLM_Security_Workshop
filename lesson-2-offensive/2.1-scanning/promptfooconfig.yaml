@@ -8,8 +8,8 @@
 description: "LLM Security Workshop - Red Team Evaluation"
 
 targets:
-  - id: ollama:llama3.2:1b
-    label: "llama3.2:1b (local)"
+  - id: ollama:tinyllama
+    label: "tinyllama (local)"
 
 redteam:
   # Number of attack variants to generate per plugin

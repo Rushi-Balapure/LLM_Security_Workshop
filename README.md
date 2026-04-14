@@ -65,14 +65,14 @@ curl -fsSL https://ollama.com/install.sh | sh
 We intentionally use a small, older, easily breakable model:
 
 ```bash
-ollama pull llama3.2:1b
+ollama pull tinyllama
 ```
 
 > ⚠️ This is a 1B parameter model chosen because it has weaker guardrails — perfect for demonstrating attacks.
 
 Verify it works:
 ```bash
-ollama run llama3.2:1b "Say hello"
+ollama run tinyllama "Say hello"
 ```
 
 #### 3. Install Python Dependencies
@@ -158,7 +158,7 @@ cd llm-security-workshop
 ollama serve   # Skip if Ollama is already running as a service
 
 # Pull the model
-ollama pull llama3.2:1b
+ollama pull tinyllama
 
 # Start with Lesson 1
 cd lesson-1-fundamentals

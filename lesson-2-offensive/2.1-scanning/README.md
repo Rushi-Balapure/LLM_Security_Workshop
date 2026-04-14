@@ -20,7 +20,7 @@ Two tools dominate the open-source LLM red-teaming space:
 | [Garak](https://github.com/NVIDIA/garak) | NVIDIA | Python | Deep vulnerability scanning, many probe types |
 | [Promptfoo](https://promptfoo.dev/) | Promptfoo Inc. | Node.js | CI/CD integration, quick red-team evals |
 
-We'll use both against our locally-hosted `llama3.2:1b` model running via Ollama.
+We'll use both against our locally-hosted `tinyllama` model running via Ollama.
 
 ---
 
@@ -81,7 +81,7 @@ Garak has built-in support for Ollama. Run a basic prompt injection scan:
 ```bash
 python -m garak \
   --model_type ollama \
-  --model_name llama3.2:1b \
+  --model_name tinyllama \
   --probes promptinject
 ```
 
@@ -89,7 +89,7 @@ python -m garak \
 ```powershell
 python -m garak `
   --model_type ollama `
-  --model_name llama3.2:1b `
+  --model_name tinyllama `
   --probes promptinject
 ```
 
@@ -100,7 +100,7 @@ python -m garak `
 ```bash
 python -m garak \
   --model_type ollama \
-  --model_name llama3.2:1b \
+  --model_name tinyllama \
   --probes promptinject,dan,knownbadsignatures
 ```
 
@@ -197,7 +197,7 @@ Promptfoo configuration targeting Ollama — pre-configured for you.
 
 ## Discussion Questions
 
-1. Which probe categories did `llama3.2:1b` fail most often?
+1. Which probe categories did `tinyllama` fail most often?
 2. How do results differ between a 1B model and a larger model you might deploy in production?
 3. How would you integrate Garak or Promptfoo into a CI/CD pipeline to catch regressions?
 
@@ -205,7 +205,7 @@ Promptfoo configuration targeting Ollama — pre-configured for you.
 
 ## ✅ Checklist
 
-- [ ] Successfully ran Garak against `llama3.2:1b`
+- [ ] Successfully ran Garak against `tinyllama`
 - [ ] Read and understood the Garak output report
 - [ ] Ran Promptfoo red-team evaluation
 - [ ] Viewed Promptfoo results in the web UI
