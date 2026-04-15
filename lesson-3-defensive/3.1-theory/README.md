@@ -130,14 +130,7 @@ User Input → [Retriever LLM] → Structured Intent (no malicious text)
 ```
 The malicious text is never passed to the action-taking LLM.
 
-### Pattern B: LLM Map-Reduce with Schema Validation
-```
-Untrusted Document → [Map LLM] → Strict JSON Schema → [Reduce LLM]
-                                  (injection neutralized by schema)
-```
-Even if an injection succeeds in the Map phase, it produces structured JSON that cannot carry free-text injections to the Reduce phase.
-
-### Pattern C: Action Selector
+### Pattern B: Action Selector
 ```
 User Request → [Selector LLM] → Predefined Tool ID (integer/enum)
                                         ↓
@@ -155,7 +148,7 @@ Before moving on, you should be able to answer:
 - [ ] Why does adding more instructions to a system prompt not reliably prevent prompt injection?
 - [ ] What does "treat LLM-accessible APIs as public" mean, and what are its practical implications?
 - [ ] What is the principle of architectural constraint for LLM security?
-- [ ] Describe at a high level how each of the three defensive patterns (Context Minimization, Map-Reduce, Action Selector) prevents injection attacks.
+- [ ] Describe at a high level how each of the three defensive patterns (Context Minimization, Action Selector) prevents injection attacks.
 
 ---
 

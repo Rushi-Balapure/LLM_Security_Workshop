@@ -141,7 +141,6 @@ llm-security-workshop/
         ├── secure_agent.py
         └── patterns/
             ├── context_minimization.py
-            ├── map_reduce.py
             └── action_selector.py
 ```
 

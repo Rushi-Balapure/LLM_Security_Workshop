@@ -1,7 +1,7 @@
 """
 patterns/action_selector.py
 ============================
-Pattern C: Action Selector
+Pattern B: Action Selector
 
 Architecture:
   User Request → [Selector LLM] → Integer (1–N)
@@ -191,7 +191,7 @@ def process(user_message: str) -> dict:
 
 if __name__ == "__main__":
     print("=" * 60)
-    print("  Pattern C: Action Selector")
+    print("  Pattern B: Action Selector")
     print("=" * 60)
     print("\nUser request → LLM outputs integer → hard-coded dispatch")
     print("LLM cannot generate file paths, URLs, or commands.\n")
@@ -233,4 +233,4 @@ if __name__ == "__main__":
             else:
                 print("✅ Attack neutralized — LLM output was an integer, not a command")
 
-    print("\n✅ Pattern C demo complete.\n")
+    print("\n✅ Pattern B demo complete.\n")
