@@ -92,29 +92,6 @@ When combined with prompt injection, excessive agency is catastrophic: the attac
 
 [MITRE ATLAS](https://atlas.mitre.org/) (Adversarial Threat Landscape for Artificial-Intelligence Systems) is the AI equivalent of the well-known MITRE ATT&CK framework. It catalogs real-world adversary tactics, techniques, and procedures (TTPs) targeting AI systems.
 
-### Key Tactics Relevant to This Workshop
-
-#### AML.TA0001 — ML Model Access
-Adversaries gain access to an ML model to understand its behavior before launching an attack. In our workshop context, this means an attacker probing your deployed LLM.
-
-**Techniques:**
-- `AML.T0040` — ML Model Inference API Access (querying the public API repeatedly)
-- `AML.T0047` — ML-Enabled Product or Service (black-box access via your app's UI)
-
-#### AML.TA0004 — Execution
-Adversaries execute malicious code or cause unintended model behavior.
-
-**Techniques:**
-- `AML.T0051` — Prompt Injection (direct manipulation of model behavior)
-- `AML.T0054` — LLM Jailbreak (bypassing model safety guidelines)
-
-#### AML.TA0009 — Impact
-Adversaries achieve their final objective.
-
-**Techniques:**
-- `AML.T0048` — Societal Harm (misinformation at scale)
-- `AML.T0031` — Erode ML Model Integrity (poisoning)
-
 ### Reading the ATLAS Matrix
 
 ATLAS organizes attacks into a matrix format. Each cell is a technique. Rows are tactics (the *why* — the attacker's goal). Columns show how techniques map across different AI system types.
